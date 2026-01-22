@@ -796,3 +796,13 @@ function onResize() {
 window.addEventListener('resize', onResize);
 sections[0].classList.add('active');
 animate();
+
+// Mobile warning dismissal
+const warningModal = document.getElementById('mobile-warning');
+const dismissBtn = document.getElementById('dismiss-warning');
+
+if (dismissBtn && warningModal) {
+  dismissBtn.addEventListener('click', () => {
+    warningModal.classList.add('dismissed');
+  });
+}
