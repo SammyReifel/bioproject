@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acetylcholine: A Molecular Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Fixed 3D Canvas -->
+      <canvas id="three-canvas"></canvas>
+      
+      <!-- Progress indicator -->
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      
+      <!-- Navigation dots -->
+      <nav class="section-nav">
+        <button class="nav-dot active" data-section="0" aria-label="Introduction"></button>
+        <button class="nav-dot" data-section="1" aria-label="The Ligand"></button>
+        <button class="nav-dot" data-section="2" aria-label="Synthesis & Release"></button>
+        <button class="nav-dot" data-section="3" aria-label="Receptors"></button>
+        <button class="nav-dot" data-section="4" aria-label="Transduction"></button>
+        <button class="nav-dot" data-section="5" aria-label="Response"></button>
+        <button class="nav-dot" data-section="6" aria-label="Termination"></button>
+        <button class="nav-dot" data-section="7" aria-label="Imbalances"></button>
+      </nav>
+      
+      <!-- Scrollable content sections -->
+      <div class="scroll-container">
+        
+        <!-- Section 0: Introduction -->
+        <section class="content-section" data-section="0">
+          <div class="info-panel">
+            <span class="section-label">Introduction</span>
+            <h1 class="section-title">Acetylcholine</h1>
+            <p class="section-subtitle">A Neurotransmitter's Journey</p>
+            <div class="section-content">
+              <p><strong>Acetylcholine (ACh)</strong> is a neurotransmitter — a chemical messenger that carries signals from your brain to your body through nerve cells.</p>
+              <div class="info-card">
+                <div class="info-card-header">
+                  <span class="info-card-icon">⚡</span>
+                  <span class="info-card-title">Signal Type</span>
+                </div>
+                <p>Excitatory neurotransmitter — it stimulates cells to become active and generate responses.</p>
+              </div>
+              <div class="info-card">
+                <div class="info-card-header">
+                  <span class="info-card-icon">🧠</span>
+                  <span class="info-card-title">Where It Works</span>
+                </div>
+                <p>Both the <strong>central nervous system</strong> (brain & spinal cord) and <strong>peripheral nervous system</strong> (nerves to muscles & organs).</p>
+              </div>
+              <div class="info-card">
+                <div class="info-card-header">
+                  <span class="info-card-icon">💪</span>
+                  <span class="info-card-title">Primary Function</span>
+                </div>
+                <p>Controls muscle contractions, regulates heart rate, and facilitates memory and learning.</p>
+              </div>
+            </div>
+            <div class="scroll-hint">
+              <span>Scroll to begin the journey</span>
+              <div class="scroll-arrow"></div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Section 1: The Ligand -->
+        <section class="content-section" data-section="1">
+          <div class="info-panel">
+            <span class="section-label">The Ligand</span>
+            <h2 class="section-title">Acetylcholine as a Signaling Molecule</h2>
+            <div class="section-content">
+              <p>ACh functions as a <strong>ligand</strong> — a molecule that binds to receptors on target cells to transmit signals.</p>
+              
+              <div class="molecule-stats">
+                <div class="stat">
+                  <span class="stat-value">C₇H₁₆NO₂</span>
+                  <span class="stat-label">Chemical Formula</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">146.2</span>
+                  <span class="stat-label">Molecular Weight (g/mol)</span>
+                </div>
+              </div>
+              
+              <div class="info-card highlight">
+                <div class="info-card-header">
+                  <span class="info-card-icon">🔑</span>
+                  <span class="info-card-title">Lock and Key</span>
+                </div>
+                <p>Like a key fitting into a lock, ACh has a specific shape that allows it to bind precisely to its receptors, triggering cellular responses.</p>
+              </div>
+              
+              <p>The ACh molecule consists of:</p>
+              <ul class="feature-list">
+                <li><strong>Acetyl group</strong> — derived from acetyl-CoA</li>
+                <li><strong>Choline</strong> — an essential nutrient</li>
+                <li><strong>Ester bond</strong> — links the two components</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Section 2: Synthesis & Release -->
+        <section class="content-section" data-section="2">
+          <div class="info-panel">
+            <span class="section-label">Signal Delivery</span>
+            <h2 class="section-title">Synthesis & Release</h2>
+            <div class="section-content">
+              <p>ACh is synthesized inside the <strong>presynaptic neuron</strong> and released into the synaptic cleft when an action potential arrives.</p>
+              
+              <div class="process-steps">
+                <div class="process-step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h4>Synthesis</h4>
+                    <p>Choline + Acetyl-CoA combine with help from the enzyme <strong>choline acetyltransferase (ChAT)</strong></p>
+                  </div>
+                </div>
+                <div class="process-step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h4>Storage</h4>
+                    <p>ACh is packaged into <strong>synaptic vesicles</strong> at the axon terminal</p>
+                  </div>
+                </div>
+                <div class="process-step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h4>Release</h4>
+                    <p>Action potential triggers <strong>Ca²⁺ influx</strong>, causing vesicle fusion and ACh release</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="info-card">
+                <div class="info-card-header">
+                  <span class="info-card-icon">🔬</span>
+                  <span class="info-card-title">The Synaptic Cleft</span>
+                </div>
+                <p>A tiny gap (~20-40 nm) between the presynaptic and postsynaptic cells where ACh travels to reach its receptors.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Section 3: Receptors -->
+        <section class="content-section" data-section="3">
+          <div class="info-panel">
+            <span class="section-label">Reception</span>
+            <h2 class="section-title">Protein Receptors</h2>
+            <div class="section-content">
+              <p>ACh binds to two main types of receptors on the postsynaptic cell membrane:</p>
+              
+              <div class="receptor-comparison">
+                <div class="receptor-card nicotinic">
+                  <h3>Nicotinic Receptors</h3>
+                  <span class="receptor-type">Ligand-Gated Ion Channel</span>
+                  <p>Opens immediately when ACh binds, allowing ions (Na⁺, K⁺, Ca²⁺) to flow into the cell.</p>
+                  <div class="receptor-stats">
+                    <span class="receptor-stat">
+                      <strong>&lt;1 ms</strong>
+                      <span>Response time</span>
+                    </span>
+                    <span class="receptor-stat">
+                      <strong>Fast</strong>
+                      <span>Signal type</span>
+                    </span>
+                  </div>
+                  <p class="receptor-location">Found at: Neuromuscular junctions, autonomic ganglia</p>
+                </div>
+                
+                <div class="receptor-card muscarinic">
+                  <h3>Muscarinic Receptors</h3>
+                  <span class="receptor-type">G-Protein Coupled Receptor</span>
+                  <p>ACh binding activates G-proteins, which trigger secondary messenger cascades inside the cell.</p>
+                  <div class="receptor-stats">
+                    <span class="receptor-stat">
+                      <strong>100+ ms</strong>
+                      <span>Response time</span>
+                    </span>
+                    <span class="receptor-stat">
+                      <strong>Slow</strong>
+                      <span>Signal type</span>
+                    </span>
+                  </div>
+                  <p class="receptor-location">Found at: Heart, smooth muscle, glands, brain</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Section 4: Transduction -->
+        <section class="content-section" data-section="4">
+          <div class="info-panel">
+            <span class="section-label">Transduction</span>
+            <h2 class="section-title">Signal Transduction Pathways</h2>
+            <div class="section-content">
+              <p>Once ACh binds, the signal is <strong>transduced</strong> — converted into a cellular response through different mechanisms.</p>
+              
+              <div class="pathway-diagram">
+                <div class="pathway nicotinic-pathway">
+                  <h4>Nicotinic Pathway</h4>
+                  <div class="pathway-flow">
+                    <span class="pathway-node">ACh Binds</span>
+                    <span class="pathway-arrow">→</span>
+                    <span class="pathway-node">Channel Opens</span>
+                    <span class="pathway-arrow">→</span>
+                    <span class="pathway-node">Na⁺ Influx</span>
+                    <span class="pathway-arrow">→</span>
+                    <span class="pathway-node">Depolarization</span>
+                  </div>
+                  <p class="pathway-note">Direct mechanism — no intermediaries needed</p>
+                </div>
+                
+                <div class="pathway muscarinic-pathway">
+                  <h4>Muscarinic Pathway</h4>
+                  <div class="pathway-flow">
+                    <span class="pathway-node">ACh Binds</span>
+                    <span class="pathway-arrow">→</span>
+                    <span class="pathway-node">G-Protein Activates</span>
+                    <span class="pathway-arrow">→</span>
+                    <span class="pathway-node">Second Messengers</span>
+                    <span class="pathway-arrow">→</span>
+                    <span class="pathway-node">Cellular Effects</span>
+                  </div>
+                  <p class="pathway-note">Indirect mechanism — signal amplification cascade</p>
+                </div>
+              </div>
+              
+              <div class="info-card">
+                <div class="info-card-header">
+                  <span class="info-card-icon">⚡</span>
+                  <span class="info-card-title">Depolarization</span>
+                </div>
+                <p>When Na⁺ ions rush in, they make the inside of the cell more positive, potentially triggering an <strong>action potential</strong> if the signal is strong enough.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Section 5: Response -->
+        <section class="content-section" data-section="5">
+          <div class="info-panel">
+            <span class="section-label">Cellular Response</span>
+            <h2 class="section-title">What Happens Next</h2>
+            <div class="section-content">
+              <p>The cellular response depends on <strong>receptor type</strong> and <strong>tissue location</strong>:</p>
+              
+              <div class="response-grid">
+                <div class="response-item">
+                  <div class="response-icon">💪</div>
+                  <h4>Muscle Contraction</h4>
+                  <p>At neuromuscular junctions, nicotinic receptors trigger skeletal muscle contraction for movement.</p>
+                </div>
+                <div class="response-item">
+                  <div class="response-icon">❤️</div>
+                  <h4>Heart Rate Control</h4>
+                  <p>M2 muscarinic receptors in the heart <strong>slow heart rate</strong> — parasympathetic "rest and digest" response.</p>
+                </div>
+                <div class="response-item">
+                  <div class="response-icon">🔄</div>
+                  <h4>Smooth Muscle</h4>
+                  <p>M3 receptors cause contraction in smooth muscle (digestive tract, airways, blood vessels).</p>
+                </div>
+                <div class="response-item">
+                  <div class="response-icon">💧</div>
+                  <h4>Gland Secretion</h4>
+                  <p>Triggers secretion from salivary glands, sweat glands, and digestive glands.</p>
+                </div>
+              </div>
+              
+              <div class="info-card">
+                <div class="info-card-header">
+                  <span class="info-card-icon">🧠</span>
+                  <span class="info-card-title">In the Brain</span>
+                </div>
+                <p>ACh plays crucial roles in <strong>memory formation</strong>, <strong>attention</strong>, and <strong>learning</strong>. It modulates the activity of other neurons in cognitive circuits.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Section 6: Termination -->
+        <section class="content-section" data-section="6">
+          <div class="info-panel">
+            <span class="section-label">Signal Termination</span>
+            <h2 class="section-title">Breaking Down the Signal</h2>
+            <div class="section-content">
+              <p>ACh signaling must be <strong>rapidly terminated</strong> to prevent overstimulation and allow for new signals.</p>
+              
+              <div class="enzyme-highlight">
+                <h3>Acetylcholinesterase (AChE)</h3>
+                <div class="enzyme-stat">
+                  <span class="big-number">~5,000</span>
+                  <span class="stat-desc">ACh molecules broken down <strong>per second</strong></span>
+                </div>
+                <p>One of the fastest enzymes in the body!</p>
+              </div>
+              
+              <div class="process-steps">
+                <div class="process-step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h4>Hydrolysis</h4>
+                    <p>AChE breaks ACh into <strong>acetic acid</strong> and <strong>choline</strong></p>
+                  </div>
+                </div>
+                <div class="process-step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h4>Recycling</h4>
+                    <p>Choline is taken back up by the presynaptic neuron via transporters</p>
+                  </div>
+                </div>
+                <div class="process-step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h4>Resynthesis</h4>
+                    <p>Recycled choline is used to make new ACh molecules</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="info-card feedback">
+                <div class="info-card-header">
+                  <span class="info-card-icon">🔄</span>
+                  <span class="info-card-title">Feedback Mechanism</span>
+                </div>
+                <p>This rapid breakdown and recycling creates a <strong>negative feedback loop</strong> — ensuring signals are brief and precise, preventing continuous stimulation.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Section 7: Imbalances -->
+        <section class="content-section" data-section="7">
+          <div class="info-panel">
+            <span class="section-label">When Things Go Wrong</span>
+            <h2 class="section-title">Pathway Imbalances</h2>
+            <div class="section-content">
+              <p>When the ACh pathway doesn't work correctly, serious consequences can occur:</p>
+              
+              <div class="condition-cards">
+                <div class="condition-card danger">
+                  <h4>Nerve Agent Poisoning</h4>
+                  <p>Compounds like sarin <strong>inhibit AChE</strong>, causing ACh to accumulate. Results in:</p>
+                  <ul>
+                    <li>Continuous muscle contraction</li>
+                    <li>Paralysis</li>
+                    <li>Respiratory failure</li>
+                  </ul>
+                </div>
+                
+                <div class="condition-card warning">
+                  <h4>Myasthenia Gravis</h4>
+                  <p>Autoimmune disease where antibodies <strong>attack nicotinic receptors</strong> at neuromuscular junctions.</p>
+                  <ul>
+                    <li>Progressive muscle weakness</li>
+                    <li>Fatigue with repeated use</li>
+                    <li>Drooping eyelids, difficulty swallowing</li>
+                  </ul>
+                </div>
+                
+                <div class="condition-card info">
+                  <h4>Alzheimer's Disease</h4>
+                  <p><strong>Decreased ACh production</strong> in the brain contributes to cognitive decline.</p>
+                  <ul>
+                    <li>Memory loss</li>
+                    <li>Confusion</li>
+                    <li>Difficulty with learning</li>
+                  </ul>
+                  <p class="treatment-note">Treatment often includes <strong>AChE inhibitors</strong> to increase ACh availability.</p>
+                </div>
+              </div>
+              
+              <div class="info-card">
+                <div class="info-card-header">
+                  <span class="info-card-icon">⚖️</span>
+                  <span class="info-card-title">Balance is Key</span>
+                </div>
+                <p>Too much ACh (from AChE inhibition) or too little (from receptor destruction or reduced synthesis) both cause serious dysfunction. The pathway requires precise regulation at every step.</p>
+              </div>
+              
+              <div class="summary-box">
+                <h4>The Complete Journey</h4>
+                <p>From synthesis to signal termination, acetylcholine orchestrates a precisely timed dance of molecular interactions — enabling everything from a simple muscle twitch to complex thought processes.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
