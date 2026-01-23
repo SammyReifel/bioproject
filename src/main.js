@@ -820,8 +820,11 @@ const closeBannerBtn = document.getElementById('close-banner');
 
 if (reloadBtn) {
   reloadBtn.addEventListener('click', () => {
-    window.location.reload();
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
     window.scrollTo(0, 0);
+    window.location.reload();
   });
 }
 
