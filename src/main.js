@@ -749,6 +749,12 @@ function handleSectionEffects(index) {
         yoyo: true,
         repeat: -1
       });
+
+      // Show completion banner
+      const banner = document.getElementById('completion-banner');
+      if (banner) {
+        banner.classList.remove('hidden');
+      }
       break;
   }
 }
@@ -804,5 +810,23 @@ const dismissBtn = document.getElementById('dismiss-warning');
 if (dismissBtn && warningModal) {
   dismissBtn.addEventListener('click', () => {
     warningModal.classList.add('dismissed');
+  });
+}
+
+// Completion banner handling
+const completionBanner = document.getElementById('completion-banner');
+const reloadBtn = document.getElementById('reload-btn');
+const closeBannerBtn = document.getElementById('close-banner');
+
+if (reloadBtn) {
+  reloadBtn.addEventListener('click', () => {
+    window.location.reload();
+    window.scrollTo(0, 0);
+  });
+}
+
+if (closeBannerBtn && completionBanner) {
+  closeBannerBtn.addEventListener('click', () => {
+    completionBanner.classList.add('hidden');
   });
 }
